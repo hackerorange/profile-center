@@ -1,0 +1,21 @@
+server:
+  port: 8087
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/postcardcenter_test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: zhongchongtao
+    password: zhongchongtao137
+    druid-pool:
+      max-active: 1000
+com:
+  soho:
+    inko:
+      postcard:
+        process-status-map:
+          100001: 创建成功
+          100002: 未提交
+          100003: 已提交
+          100004: 未处理
+          100005: 已处理
+          -100005: 裁切失败
